@@ -213,6 +213,49 @@ if(id2 >=60 ) {
     console.log("New start");
 }
 
+// fizzBuzz Challenge!
+
+for(let i=1; i <=100; i++ ){
+    console.log(i)
+}   if(i % 3==0  ){
+    console.log("fizz")
+}   if(i % 5==0){
+    console.log("Buzz")
+}   if(i %3&&5==0){
+    console.log("FizzBuzz")
+}
+
+let z = 1
+while(z % 3==0){
+    console.log("fizz")
+}   if(z % 5 ==0){
+    console.log("Buzz")
+}   if(z % 3 && 5 == 0){
+    console.log("FizzBuzz!")
+}
+
+let adc = 1;
+while (adc <=100) {
+    if(adc % 3 == 0) {
+        console.log("Fizz");
+}   if(adc % 5 == 0){
+        console.log("buzz")
+}   if(adc % 3 & 5 == 0){
+        console.log("FizzBuzz!")
+}
+    adc++   
+}
+    
+
+    
+    
+    
+
+
+
+
+
+
 
 
 
