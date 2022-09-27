@@ -139,5 +139,87 @@ for(let ac = 100; ac <= 200; ac++){
     console.log(ac)
 }
 
+let ad = 100;
+while (ad <= 200) {
+    if(ad % 2 == 0) {
+        console.log("-");
+    } else {
+        console.log("*");
+    }
+    ad++
+}
+
+//if, else if and else statements
+//check a condition
+//run a code block if the condition is met
+
+let ae =2;
+if (ae==0) {
+    console.log("sunshine");
+}
+
+//ternary if
+//shorthand version of ifelse
+
+let x = 2;
+
+if(x == 2) {
+    console.log("x is 2");
+} else {
+    console.log("x is not 2");
+}
+
+x == 2 ? console.log("x is 2") : console.log("x is not 2");
+
+//equality and type
+
+"1" == 1 ? console.log(true) : console.log(false);
+
+// strictly equals operator- checks value and data types
+
+"1" === 1 ? console.log(true) : console.log(false);
+
+if( 1 == 1 && 2 == 2) {
+    console.log("this works");
+}
+
+if (1 == 2 || 2 == 2){
+    console.log("only one of these has to work")
+}
+
+let age = 89
+
+if(age >=18 && age <=65  ){
+    console.log("Age within range")
+} else if(age<18) {
+    console.log("Under 18 years old")
+}else {
+    console.log("Catch all else")
+}
+
+let ageData = 100
+let result = ageData >= 50? "50 or over" : "under 50";
+console.log(result);
+
+let id = 25
+let idReqd = id >30? "Old start" : "New start";
+console.log(idReqd);
+
+let id2 = 75
+
+if(id2 >=60 ) {
+    console.log("Old start")
+}else if(id2 <=60){
+    console.log("New start");
+}
+
+
+
+
+
+
+
+
+
 
 
