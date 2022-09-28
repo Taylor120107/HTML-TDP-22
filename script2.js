@@ -207,3 +207,39 @@ const myFun4 = (t,u) => {
 }
 myfun3("arrow function");// z- arrow function now
 myFun4(3,4);
+
+//callbacks - pass in a function as an arguement/parameter/input in to another function
+
+//promises- an operation that hasnt been completed
+//they have 3 states in which they can be whicha re:
+//-fulfilled
+//-rejected
+//-pending
+
+// closures are utilised for data privacy
+//outer function
+const fullName = (fname) => {
+    let intro = "My name is ";
+    //inner  function
+    let lName = (s) => {
+        return `$(intro) $(fname) $(s)`;//return exposes result of a function
+    }
+    return lName;
+}
+
+let first = fullName("Luke");
+console.log(first);
+
+let second = first("Taylor");
+console.log(second);
+
+// qa closure excercise
+
+let multiply = (a) => {
+    return (y) => {
+        return x * y
+    };
+    }
+
+
+
