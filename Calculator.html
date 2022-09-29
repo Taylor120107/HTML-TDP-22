@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="calculator.css"></script>
+
+</head>
+<body>
+    <h2>Welcome to my Calculator</h2>
+    <main>
+        <section>
+            <input  type="number" value="" id="calculator" readonly >
+            
+            
+            
+            <div id="calculatorButtons">
+                <button onClick=plus()>+</button>
+                <button onClick=minus()>-</button>
+                <button onClick=mult()>*</button>
+                <button onClick=divide()>/</button>
+                <br>
+                <button onClick=one()>1</button>
+                <button onClick=two()>2</button>
+                <button onClick=three()>3</button>
+                <button onClick=four()>4</button>
+                <br>
+                <button onClick=five()>5</button>
+                <button onClick=six()>6</button>
+                <button onClick=seven()>7</button>
+                <button onClick=eight()>8</button>
+                <br>
+                <button onClick=nine()>9</button>
+                <button onClick=zero()>0</button>
+                <button onClick=clear()>AC</button>
+                <button onClick=equals()>=</button>
+
+
+            </div>
+        </section>
+        <section id="output">
+        </section>
+
+    </main>
+    
+    <script src ="calculator.js"></script>
+</body>
+</html>
