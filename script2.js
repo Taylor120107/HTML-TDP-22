@@ -169,7 +169,7 @@ const [a1,a2,a3,a4,a5,a6,a7] = myArr
 console.log(myArr[0]+myArr[1]);
 console.log(a1+a2);
 console.log(a1+parseInt(a2));//enables you to chage string to int
-//spread operator
+//spread operator - ...
 const[name1,name2,...rest] = names;
 console.log(name2)
 console.log("rest:",rest);
@@ -210,8 +210,19 @@ myFun4(3,4);
 
 //callbacks - pass in a function as an arguement/parameter/input in to another function
 
+const hard = (snoopy,charlie) =>{
+    console.log("charlie is here")
+    console.log("Snoopy doesnt know why")
+}
+const userInput = (callback) =>{
+    let brown = prompt ("Enter mood");
+    console.log("Charlies Mood: ");
+    callback (prompt);
+}
+userInput(hard);
+
 //promises- an operation that hasnt been completed
-//they have 3 states in which they can be whicha re:
+//they have 3 states in which they can be which are:
 //-fulfilled
 //-rejected
 //-pending
@@ -235,11 +246,21 @@ console.log(second);
 
 // qa closure excercise
 
-let multiply = (a) => {
-    return (y) => {
-        return x * y
-    };
-    }
 
 
 
+function add (x,y){
+    let sum=(x+y)
+    console.log(sum);
+
+}
+add (5,10);
+
+const sub = function(y,z){
+    let minus=(y-z);
+    console.log(minus);
+}
+sub(10,5);
+
+const mult = (g,h) => console.log(g*h);
+mult(5,10);
