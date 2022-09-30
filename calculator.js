@@ -1,88 +1,89 @@
-const calculator = document.getElementById("calculator")
+const calculator = document.getElementById("calculator-screen")
+const calculatorButtons= document.getElementById("calculatorButtons")
 
 const one = () => {
-    calculator.value = 1 ;
+    calculatorButtons.value = calculatorButtons.value + 1 ;
     
 }
 
 const two = () => {
-    calculator.value = 2;
+    calculatorButtons.value =calculatorButtons.value + 2;
     
 
 }
 
 const three = () => {
-    calculator.value = 3;
+    calculatorButtons.value = calculatorButtons.value + 3;
     
 
 }
 
 const four = () => {
-    calculator.value = 4;
+    calculatorButtons.value = calculatorButtons.value + 4;
    
 
 }
 
 const five = () => {
-    calculator.value = 5;
+    calculatorButtons.value = calculatorButtons.value + 5;
     
 
 }
 
 const six = () => {
-    calculator.value = 6;
+    calculatorButtons.value = calculatorButtons.value + 6;
     
 
 }
 
 const seven = () => {
-    calculator.value = 7;
+    calculatorButtons.value = calculatorButtons.value + 7;
     
 
 }
 
 const eight = () => {
-    calculator.value = 8
+    calculatorButtons.value = calculatorButtons.value + 8
 
 }
 
 const nine = () => {
-    calculator.value = 9;
+    calculatorButtons.value = calculatorButtons.value + 9;
     
 
 }
 
 const zero = () => {
-    calculator.value = 0;
+    calculatorButtons.value = calculatorButtons.value + 0;
    
 }
 
 const plus = () => {
-    calculator.value = "=";
+    calculatorButtons.value = "+";
     
 
 }
 
 const minus = () => {
-    calculator.value = "-";
+    calculatorButtons.value = "-";
    
 
 }
 
 const mult = () => {
-    calculator.value = "*";
+    calculatorButtons.value = "*";
     
 
 }
 
 const divide = () => {
-    calculator.value = "/";
+    calculatorButtons.value = "/";
     
 
 }
 
-const clear = () => {
-    calculator.value = 0;
+const clearIt = () => {
+    calculatorButtons.value = "";
     
 
 }
