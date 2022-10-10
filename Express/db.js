@@ -4,7 +4,7 @@ mongoose.connect("mongodb://localhost:27017/tdp_db",
 function (err) {
     if (err) {
         "errored"
-    } else (console.log("connection Successful")
+    } else (console.log("Connection Successful")
     ) 
 });
 
@@ -30,3 +30,11 @@ const nameModel = mongoose.model("name",nameSchema); // object with all mongo fu
 module.exports= {
     nameModel
 }
+
+// sub docs/childschema
+
+const childSchema = new schema({finerDetails});
+
+const parentSchema = new mongoose.Schema({
+    children: [childSchema]
+});
