@@ -6,23 +6,34 @@ let group = ["Luke","Thom","Fauzia","Mimi","Shakeel","Michael"];
 
 router.get(`hello`, (req,res) => res.send("Hello,Hello"));
 
-router.get("/getAll", (req,res) => res.send(group));
+router.get("/getAll", (req,res) => nameModel.find({}).then(results => res.send(results)).catch(err => next(err)));
 
 
-router.post(`/newName`,(req,res) =>{
-    const name = req.body.name; 
-    group.push(name); 
-    res.status(201).send(`${group} added successfully`);
+router.post(`/newName`, async (req,res,next) =>{
+    if (!req.bodyname) return next({status:400, message: "Missing Name!"})
+    try{
+        const result = await nameModel.create(req.body);
+        res.status(201).send(result);
+    } catch(err){
+        return next(err)
+    }
 });
 
-router.put(`/replace/:id`, (req,res,next)=> {
-    const newName = req.query.name;
-    const old = group[req.params.id];
-    group[req.params.id]=newName;
-    res.send(`successfully replaced ${old} with ${group[req.params.id, 1]}`);
-    next();
+router.patch(`/replace/:id`, (req,res,next)=> {
+    try {
+        await nameModel.findByIdAndUpdate(req.params.id, req.query)
+        const newName = await nameModel.findById(req.params.id);
+        res.send(newName);
+    }catch(err) {
+        return next(err);
+    }
 });
+   
 
-router.delete(`/delete/:id`, (req,res) => { res.send(group.splice(req.params.id, 1));});
+router.delete(`/delete/:id`, (req,res,next) => {
+    const {id} = req.params;
+    console.log("ID", id);
+    nameModel.findByIdAndDelete(id).then(result => res.send(result)).catch(err =>next(err));
+});
 
 module.exports= router;
