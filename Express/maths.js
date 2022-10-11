@@ -7,3 +7,5 @@ function factorialise(num) {
     console.log(i);
 }
 factorialise(120);
+
+module.exports.factorialise
