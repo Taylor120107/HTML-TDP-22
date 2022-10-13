@@ -5,6 +5,7 @@ function Counter(){
 
     return(
         <>
+        <h1>Counter</h1>
         <input type="number" value={count} onChange={(event)=>setCount
         (event.target.value)}/>
         <button onClick={()=>setCount(count+1)}>increment 1</button>

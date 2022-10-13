@@ -1,10 +1,18 @@
 import './App.css';
-import MyComponent from `./Components/MyComponent`
-import Parent from `./props/SomethingInteresting`
+import MyComponent from `./Components/MyComponent`;
+import Parent from `./Props/SomethingInteresting`;
+import MilesAhead from `./States/MilesAhead`;
+import Clock from `./States/Clock`;
 
 function App() {
   return (
-    <Parent/>
+    <MilesAhead/>
+  );
+}
+
+function ClockFace() {
+  return(
+    <Clock/>
   );
 }
 
