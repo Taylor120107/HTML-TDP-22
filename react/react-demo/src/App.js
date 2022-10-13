@@ -1,9 +1,10 @@
 import './App.css';
-import MyComponent from `./MyComponent`
+import MyComponent from `./Components/MyComponent`
+import PropComp from `./props/SomethingInteresting`
 
 function App() {
   return (
-    <myComponent/>
+    <PropComp/>
   );
 }
 
