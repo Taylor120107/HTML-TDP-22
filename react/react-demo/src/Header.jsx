@@ -1,7 +1,7 @@
 const Header = () => {
 
     return (
-    <header>
+    <div>
         <nav className="navbar navbar-expand-sm">
         <a
 
@@ -16,7 +16,7 @@ const Header = () => {
             to do App
         </a>
         </nav>
-    </header>
+    </div>
     );
 }
 export default Header;
