@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1> Hello There!</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -21,5 +22,22 @@ function App() {
     </div>
   );
 }
+
+const NamesApp = () => {
+
+  const Details = {
+    Forename : "Luke",
+    Surname : "Taylor",
+    Hobbies : "Music"
+  }
+
+  return (
+    <div>
+      <p>{Details}</p>
+      
+    </div>
+  );
+}
+
 
 export default App;
