@@ -1,8 +1,16 @@
-const Hello= props => {
-    return (
-        <h1>Hello, {props.name}</h1>
+import ComponentWithProps from `./ComponentWithProps`
 
-    );
+function Parent(){
+    return(
+        <>
+        <h1>This is a Parent</h1>
+        <ComponentWithProps
+        name="Luke"
+        age="28"
+        mood="Meh"        
+        />
+        </>
+    )
 }
 
 const PropComp = () =>{
@@ -16,3 +24,5 @@ const PropComp = () =>{
     </>
     );
 }
+
+export default Parent
