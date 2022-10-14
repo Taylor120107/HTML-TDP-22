@@ -15,5 +15,4 @@ function ClockFace() {
     <Clock/>
   );
 }
-
 export default App;
