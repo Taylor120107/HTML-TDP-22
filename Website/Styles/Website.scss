@@ -94,6 +94,19 @@ section{
     background-color: slateblue;
 }
 
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-ease-out;
+    @keyframes scaleAnim {
+        0%{
+            transform : translateY(-100%) scaleY(0)
+        }
+        100%{
+            transform: translateY(0) scaleY(1)
+        }
+    }
+}
+
 .controlls{
     position: fixed;
     z-index: 10;
