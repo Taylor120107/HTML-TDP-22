@@ -53,6 +53,15 @@ section {
   padding: 3 rem 18 rem;
 }
 
+.container {
+  display: none;
+  -webkit-transform: translateY(-100%) scale(0);
+          transform: translateY(-100%) scale(0);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-color: var(--color-primary);
+}
+
 .section {
   -webkit-transform: translateY(-100%) scale(0);
           transform: translateY(-100%) scale(0);
@@ -138,5 +147,12 @@ section {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
+}
+
+.controlls .active-btn {
+  background-color: var(--color-secondary) !important;
+  -webkit-transition: all 0.4s ease-in-ease-out i;
+  transition: all 0.4s ease-in-ease-out i;
+  transition-color: var(--color-white) !important;
 }
 /*# sourceMappingURL=Website.css.map */
