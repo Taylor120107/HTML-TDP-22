@@ -8,9 +8,8 @@
   "name": "selenium",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "mocha Tests/firstTest--reporter=nyann--exit"
   },
   "keywords": [],
   "author": "",
