@@ -1,39 +1,37 @@
 require("chromedriver");
 const should = require("chai").should();
-
-
-const {Builder,By,Key} = require ("selenium-webdriver");
+const { Builder, By, Key } = require("selenium-webdriver");
 
 //describe block
-describe("add todo tests",function(){
+describe("add todo tests", function () {
 
 
     //it block
 
-    it("successfully adds a todo to application",async function(){
+    it("successfully adds a todo to application", async function () {
 
         //launch broswer
-    let driver = await new Builder().forBrowser("chrome").build();
+        let driver = await new Builder().forBrowser("chrome").build();
 
         //location
-    await driver.get("https://lambdatest.github.io/sample-todo-app/")
+        await driver.get("https://lambdatest.github.io/sample-todo-app/")
 
         //todo
-    await driver.findElement(By.id("sampletodotext"))
-    .sendKeys("learn Selenium", Key.RETURN);
+        await driver.findElement(By.id("sampletodotext"))
+            .sendKeys("learn Selenium", Key.RETURN);
 
         //assertion
-    let todoText = await driver.findElement(By.xpath("//li[last()]"))
-    .getText()
-    .then(function(value){
-        return value
-    });
-    
+        let todoText = await driver.findElement(By.xpath("//li[last()]"))
+            .getText()
+            .then(function (value) {
+                return value
+            });
+
         //assert using chai check
-    todoText.should.equal("learn Selenium");
+        todoText.should.equal("learn Selenium");
 
         //quit browser
-    await driver.quit();
+        await driver.quit();
 
     });
 });
@@ -42,8 +40,8 @@ describe("add todo tests",function(){
 
 
 
-    
-    
+
+
     // //launch the browser
 
     // let driver = await new Builder().forBrowser("chrome").build();
@@ -70,7 +68,7 @@ describe("add todo tests",function(){
 
     // //assert using chai
     // todoText.should.equal("learn Selenium");
-    
+
 
     // //close the browser
 
